@@ -1,6 +1,6 @@
 # REST Football
 
-Web application example for visualizing a RESTfull API on  football data. 
+Web application example for visualizing a RESTful API on  football data. 
 
 ### Prerequisites
 
@@ -8,7 +8,9 @@ Subscribe to get an apikey [Football-Data](https://www.football-data.org/).
 
 Create a file apikey.json in the private folder to store the apikey in the server. 
 
-´´´{ "services" : {"football": {"apiKey": "XXXXXXX" } }}´´´
+```
+{ "services" : {"football": {"apiKey": "XXXXXXX" } }} 
+```
 
 ### Run in a local machine
 

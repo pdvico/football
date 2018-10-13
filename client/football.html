@@ -1,0 +1,61 @@
+<head>
+  <title>REST Football data </title>
+  <script src="vis.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+  {{> main_viz}}
+</div>	
+</body>
+
+<template name="main_viz">
+
+	<div class="col-md-12">
+		   <h1> REST Football data </h1>
+		    <br> 
+			{{> campeonatos_dropdown}}
+			{{> jugadores_list}}
+	</div>
+
+	<!-- <div class="row">
+	<div class="col-md-6">	
+	</div>
+    <div class="col-md-6">
+			{{> graficos}}
+	</div> 
+    </div>-->
+
+</template>
+
+<template name="campeonatos_dropdown">
+	<form>
+		<!-- list of available first Api call values -->
+		<br> 
+		Choose competition :
+		<br/>
+		<select class="js-select-campeonato">
+			{{#each get_campeonatos}}
+			<option value="{{id}}">{{name}}</option>
+			{{/each}}
+		</select>
+<!-- 		<button class="btn js-show-blobs">Graph</button> -->
+	</form>
+</template>	
+
+
+<template name="jugadores_list">
+	<br/>
+	List of top scorers :
+	<ul>
+	{{#each get_jugadores_valores}}
+		<li>{{nombre}}: {{goles}}</li>
+	{{/each}}
+	</ul>
+</template>
+
+<!-- <template name="graficos">
+	<div id="visjs"></div>
+</template> -->
+
